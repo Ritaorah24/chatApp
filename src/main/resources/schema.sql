@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS users (username VARCHAR(255) PRIMARY KEY);
+CREATE TABLE IF NOT EXISTS rooms (name VARCHAR(255) PRIMARY KEY);
+CREATE TABLE IF NOT EXISTS messages (
+                                        id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                        room_name VARCHAR(255) NOT NULL,
+    sender_username VARCHAR(255) NOT NULL,
+    body TEXT NOT NULL,
+    created_at TIMESTAMP NOT NULL,
+    FOREIGN KEY(room_name) REFERENCES rooms(name),
+    FOREIGN KEY(sender_username) REFERENCES users(username)
+    );
