@@ -9,3 +9,4 @@ class ChatAppApplication
 fun main(args: Array<String>) {
     runApplication<ChatAppApplication>(*args)
 }
+
