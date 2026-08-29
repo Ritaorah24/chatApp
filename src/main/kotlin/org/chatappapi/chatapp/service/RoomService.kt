@@ -1,13 +1,13 @@
 package org.chatappapi.chatapp.service
 
 import org.chatappapi.chatapp.model.Room
-import org.chatappapi.chatapp.model.RoomAlreadyExistsException
+import org.chatappapi.chatapp.exception.RoomAlreadyExistsException
 import org.chatappapi.chatapp.repository.RoomRepository
 import org.springframework.stereotype.Service
 
 
 @Service
-class RoomService (
+class  RoomService (
     private val roomRepository: RoomRepository
     ){
     fun createRoom(roomName: String): Room {

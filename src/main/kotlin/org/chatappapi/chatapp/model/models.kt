@@ -9,6 +9,7 @@ data class Room(
 )
 
 data class Message(
+    val id: Long,
     val roomName: String,
     val userName: String,
     val content: String,

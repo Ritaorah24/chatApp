@@ -1,7 +1,7 @@
 package org.chatappapi.chatapp.service
 
 import org.chatappapi.chatapp.model.User
-import org.chatappapi.chatapp.model.UserAlreadyExistsException
+import org.chatappapi.chatapp.exception.UserAlreadyExistsException
 import org.chatappapi.chatapp.repository.UserRepository
 import org.springframework.stereotype.Service
 
