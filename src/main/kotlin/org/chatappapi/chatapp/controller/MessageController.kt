@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/rooms")
 
 class MessageController (
-    private val  messageService : MessageService
+    private val  messageService: MessageService
 ){
     @GetMapping("/{roomName}/messages")
-    fun getMessage(@PathVariable roomName : String) : List<Message> {
+    fun getMessages(@PathVariable roomName : String) : List<Message> {
     return messageService.getMessages(roomName)
     }
 

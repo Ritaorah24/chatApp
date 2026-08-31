@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("/users")
 class UserController(
-    private val UserService: UserService
+    private val userService: UserService
 ) {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     fun registerUser(@RequestBody request: RegisterUserDto): User {
-        return UserService.registerUser(request.userName)
+        return userService.registerUser(request.userName)
     }
 }

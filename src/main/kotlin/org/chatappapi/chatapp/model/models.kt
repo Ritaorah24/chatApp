@@ -16,3 +16,8 @@ data class Message(
     val createdAt: String
 )
 
+data class WebSocketNotice(
+    val type: String,
+    val content: String
+)
+

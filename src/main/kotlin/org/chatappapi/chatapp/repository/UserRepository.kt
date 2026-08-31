@@ -6,20 +6,22 @@ import org.springframework.stereotype.Repository
 
 
 @Repository
-class UserRepository (private val jdbcTemplate: JdbcTemplate){
-    fun save(user: User){
+class UserRepository(private val jdbcTemplate: JdbcTemplate) {
+    fun save(user: User) {
         jdbcTemplate.update("INSERT INTO users(userName)VALUES (?)", user.userName)
- 
+
     }
+
     fun userExists(userName: String): Boolean {
         val count = jdbcTemplate.queryForObject(
-            "SELECT COUNT(*) FROM users WHERE username = ?",
+            "SELECT COUNT(*) FROM users WHERE userName = ?",
             Int::class.java,
             userName
         )
 
         return count != null && count > 0
     }
+
 }
 
 

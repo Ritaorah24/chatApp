@@ -28,4 +28,8 @@ class UserService(
 
         return user
     }
+
+    fun userExists(userName: String): Boolean {
+        return userRepository.userExists(userName)
+    }
 }

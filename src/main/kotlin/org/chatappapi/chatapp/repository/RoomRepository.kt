@@ -3,7 +3,7 @@ package org.chatappapi.chatapp.repository
 import org.chatappapi.chatapp.model.Room
 import org.springframework.jdbc.core.JdbcTemplate
 import org.springframework.stereotype.Repository
-import kotlin.Int
+
 
 @Repository
 class RoomRepository(

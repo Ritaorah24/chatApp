@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("/rooms")
 class RoomController(
-    private val roomService : RoomService
+    private val roomService: RoomService
 ) {
 
     @PostMapping
