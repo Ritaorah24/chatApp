@@ -30,7 +30,7 @@ The project includes the Gradle Wrapper, so Gradle does not need to be installed
 ### 1. Clone the repository
 
 ```bash
-git clone <your-github-repository-url>
+git clone https://github.com/Ritaorah24/chatApp.git
 
 2. Navigate into the project
 cd chatApp
