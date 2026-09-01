@@ -12,7 +12,8 @@ class WebSocketConfig(
     private val chatWebSocketHandler: ChatWebSocketHandler)
     : WebSocketConfigurer {
     override fun registerWebSocketHandlers(registry: WebSocketHandlerRegistry) {
-     registry.addHandler(chatWebSocketHandler, "/chat/{roomName}")
+     registry.addHandler(chatWebSocketHandler, "/chat/{roomName}").
+     setAllowedOriginPatterns("*")
     }
 
 }
